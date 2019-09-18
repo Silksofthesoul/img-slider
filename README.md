@@ -1,4 +1,5 @@
 # img-slider
+
 [![NPM version](https://img.shields.io/npm/v/@silksofthesoul/img-slider.svg?style=flat)](https://www.npmjs.com/package/@silksofthesoul/img-slider)
 
 ## En
@@ -57,8 +58,8 @@ Image addresses are separated by a space character corresponding to the regular 
 The parameter classes are available for the container: `.param-statusbar .param-downloadbutton .param-zoom`
 
 -   **.param-statusbar** - Show the status bar. The status displays information about which image on the account from the list is displayed (1/10).
--   **downloadbutton** -- Show upload image button
--   **param-zoom** -- The ability to deploy the inspector to the entire browser screen.
+-   **.downloadbutton** -- Show upload image button
+-   **.param-zoom** -- The ability to deploy the inspector to the entire browser screen.
 
 Example:
 
@@ -125,8 +126,8 @@ Example:
 Для контейнера доступны классы-параметры: `.param-statusbar .param-downloadbutton .param-zoom`
 
 -   **.param-statusbar** -- Показывать полосу статуса. В статусе отображается информация о том, какое изображение по счету из списка показывается (1 / 10).
--   **downloadbutton** -- Показывать кнопку "загрузить изображение"
--   **param-zoom** -- Возможность разворачивать осмотрщик на весь экран браузера.
+-   **.downloadbutton** -- Показывать кнопку "загрузить изображение"
+-   **.param-zoom** -- Возможность разворачивать осмотрщик на весь экран браузера.
 
 Пример:
 
