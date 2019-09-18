@@ -1,4 +1,5 @@
 # img-slider
+[![NPM version](https://img.shields.io/npm/v/@silksofthesoul/img-slider.svg?style=flat)](https://www.npmjs.com/package/@silksofthesoul/img-slider)
 
 ## En
 
