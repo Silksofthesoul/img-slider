@@ -82,11 +82,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return _objectSpread({}, slider, {
         statusBar: statusBar
       });
-    } else {
-      return _objectSpread({}, slider, {
-        statusBar: null
-      });
     }
+
+    return _objectSpread({}, slider, {
+      statusBar: null
+    });
   };
 
   obj.addDownloadButton = function (slider) {
@@ -98,11 +98,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       return _objectSpread({}, slider, {
         downloadButton: downloadButton
       });
-    } else {
-      return _objectSpread({}, slider, {
-        downloadButton: null
-      });
     }
+
+    return _objectSpread({}, slider, {
+      downloadButton: null
+    });
   };
 
   obj.setImage = function (currentImage, slider) {
@@ -130,7 +130,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     var Slider = {
       element: element,
       urls: element.innerText.split(/\s/igm).filter(function (item) {
-        return item ? item : false;
+        return item || false;
       }),
       currentImage: 0
     };
