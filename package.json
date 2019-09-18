@@ -1,6 +1,6 @@
 {
   "name": "@silksofthesoul/img-slider",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Just another js-slider for pictures",
   "main": "dist/index.js",
   "scripts": {
