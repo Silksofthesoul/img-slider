@@ -1,5 +1,5 @@
 {
-  "name": "img-slider",
+  "name": "@silksofthesoul/img-slider",
   "version": "1.0.2",
   "description": "Just another js-slider for pictures",
   "main": "dist/index.js",
