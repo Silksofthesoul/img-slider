@@ -1,0 +1,194 @@
+*, * * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.content {
+  width: 900px;
+  margin: 2em auto;
+  font-family: "Open Sans", helvetica, arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #575757 !important;
+}
+
+.contentSlider, .contentSlider.off {
+  display: none;
+}
+
+.contentSlider.on {
+  display: block;
+}
+
+.contentSlider.zoom {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
+  z-index: 5446;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.contentSlider {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 98vw;
+  height: 420px;
+  max-height: 70vh;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.contentSlider[zoom] .contentSliderScene {
+  cursor: zoom-in;
+}
+
+.contentSlider.zoom .contentSliderScene {
+  cursor: zoom-out;
+}
+
+.contentSlider:hover .contentSliderBtn,
+.contentSlider:hover .contentSliderDownloadButton {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.25s 0s ease-out;
+}
+
+.contentSlider:hover .contentSliderBtn:hover,
+.contentSlider:hover .contentSliderDownloadButton:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: background-color 0.25s 0s ease-out;
+}
+
+.contentSlider:hover .contentSliderBtn:active,
+.contentSlider:hover .contentSliderDownloadButton:active {
+  background-color: rgba(65, 108, 161, 0.6);
+  transition: background-color 0.25s 0s ease-out;
+}
+
+.contentSlider:hover .contentSliderBtnLeft:after,
+.contentSlider:hover .contentSliderBtnRight:after,
+.contentSlider:hover .contentSliderDownloadButton:after {
+  opacity: 0.4;
+  background-size: 55%;
+}
+
+.contentSliderBackdrop {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  filter: blur(5px);
+  transition: background-image 0.25s 0s ease-out;
+}
+
+.contentSliderScene {
+  display: block;
+  outline: 1px solid #ccc;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-position: center center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.567);
+  transition: background-image 0.25s 0s ease-out;
+}
+
+.contentSliderDownloadButton {
+  width: 32px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 4;
+  transition: background-color 0.25s 0.25s ease-out;
+}
+
+.contentSliderDownloadButton:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/PiA8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0NzEuMiA0NzEuMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDcxLjIgNDcxLjI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4gPGc+IDxnPiA8cGF0aCBkPSJNNDU3LjcsMjMwLjE1Yy03LjUsMC0xMy41LDYtMTMuNSwxMy41djEyMi44YzAsMzMuNC0yNy4yLDYwLjUtNjAuNSw2MC41SDg3LjVjLTMzLjQsMC02MC41LTI3LjItNjAuNS02MC41di0xMjQuOCBjMC03LjUtNi0xMy41LTEzLjUtMTMuNXMtMTMuNSw2LTEzLjUsMTMuNXYxMjQuOGMwLDQ4LjMsMzkuMyw4Ny41LDg3LjUsODcuNWgyOTYuMmM0OC4zLDAsODcuNS0zOS4zLDg3LjUtODcuNXYtMTIyLjggQzQ3MS4yLDIzNi4yNSw0NjUuMiwyMzAuMTUsNDU3LjcsMjMwLjE1eiIvPiA8cGF0aCBkPSJNMjI2LjEsMzQ2Ljc1YzIuNiwyLjYsNi4xLDQsOS41LDRzNi45LTEuMyw5LjUtNGw4NS44LTg1LjhjNS4zLTUuMyw1LjMtMTMuOCwwLTE5LjFjLTUuMy01LjMtMTMuOC01LjMtMTkuMSwwbC02Mi43LDYyLjggVjMwLjc1YzAtNy41LTYtMTMuNS0xMy41LTEzLjVzLTEzLjUsNi0xMy41LDEzLjV2MjczLjlsLTYyLjgtNjIuOGMtNS4zLTUuMy0xMy44LTUuMy0xOS4xLDBjLTUuMyw1LjMtNS4zLDEzLjgsMCwxOS4xIEwyMjYuMSwzNDYuNzV6Ii8+IDwvZz4gPC9nPiA8L3N2Zz4K');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  transition: opacity 0.25s 0s ease-out, background-size 0.25s 0s ease-out;
+}
+
+.contentSliderBtn {
+  display: block;
+  width: 64px;
+  height: 64px;
+  /* border-radius: 64px; */
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  margin-top: -32px;
+  top: 50%;
+  cursor: pointer;
+  transition: background-color 0.25s 0.25s ease-out;
+}
+
+.contentSliderBtnLeft {
+  left: 0px;
+  z-index: 3;
+}
+
+.contentSliderBtnRight {
+  right: 0px;
+  z-index: 4;
+}
+
+.contentSliderBtnLeft:after,
+.contentSliderBtnRight:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/PiA8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMS40OSAzMS40OSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzEuNDkgMzEuNDk7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4gPHBhdGggc3R5bGU9ImZpbGw6IzAwMDAwMDsiIGQ9Ik0yMS4yMDUsNS4wMDdjLTAuNDI5LTAuNDQ0LTEuMTQzLTAuNDQ0LTEuNTg3LDBjLTAuNDI5LDAuNDI5LTAuNDI5LDEuMTQzLDAsMS41NzFsOC4wNDcsOC4wNDdIMS4xMTEgQzAuNDkyLDE0LjYyNiwwLDE1LjExOCwwLDE1LjczN2MwLDAuNjE5LDAuNDkyLDEuMTI3LDEuMTExLDEuMTI3aDI2LjU1NGwtOC4wNDcsOC4wMzJjLTAuNDI5LDAuNDQ0LTAuNDI5LDEuMTU5LDAsMS41ODcgYzAuNDQ0LDAuNDQ0LDEuMTU5LDAuNDQ0LDEuNTg3LDBsOS45NTItOS45NTJjMC40NDQtMC40MjksMC40NDQtMS4xNDMsMC0xLjU3MUwyMS4yMDUsNS4wMDd6Ii8+IDwvc3ZnPgo=');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  transition: opacity 0.25s 0s ease-out, background-size 0.25s 0s ease-out;
+}
+
+.contentSliderBtnLeft:after {
+  transform: scale(-1);
+}
+
+.contentSliderBtnRight:after {}
+
+.contentSliderStatusBar {
+  margin-top: -2em;
+  margin-bottom: 2em;
+  opacity: 0.5;
+}
