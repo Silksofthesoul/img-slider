@@ -41,15 +41,9 @@ in the right place where the slider should be located place html:
 
 ```html
   <div class="contentSlider">
-    imgs/wallhaven-758999.png
-    imgs/wallhaven-759002.png
-    imgs/wallhaven-759016.png
-    imgs/wallhaven-759233.png
-    imgs/wallhaven-759234.png
-    imgs/wallhaven-759749.png
-    imgs/wallhaven-771572.png
-    imgs/wallhaven-774051.png
-    imgs/wallhaven-774058.png
+    path/to-image-01.png
+    path/to-image-02.png
+    path/to-image-03.png
   </div>
 ```
 
@@ -65,9 +59,9 @@ Example:
 
 ```html
   <div class="contentSlider param-statusbar param-downloadbutton param-zoom">
-    imgs/wallhaven-758999.png
-    imgs/wallhaven-759002.png
-    imgs/wallhaven-759016.png
+    path/to-image-01.png
+    path/to-image-02.png
+    path/to-image-03.png
   </div>
 ```
 
@@ -109,15 +103,9 @@ Example:
 
 ```html
   <div class="contentSlider">
-    imgs/wallhaven-758999.png
-    imgs/wallhaven-759002.png
-    imgs/wallhaven-759016.png
-    imgs/wallhaven-759233.png
-    imgs/wallhaven-759234.png
-    imgs/wallhaven-759749.png
-    imgs/wallhaven-771572.png
-    imgs/wallhaven-774051.png
-    imgs/wallhaven-774058.png
+    path/to-image-01.png
+    path/to-image-02.png
+    path/to-image-03.png
   </div>
 ```
 
@@ -133,8 +121,8 @@ Example:
 
 ```html
   <div class="contentSlider param-statusbar param-downloadbutton param-zoom">
-    imgs/wallhaven-758999.png
-    imgs/wallhaven-759002.png
-    imgs/wallhaven-759016.png
+    path/to-image-01.png
+    path/to-image-02.png
+    path/to-image-03.png
   </div>
 ```
