@@ -1,0 +1,189 @@
+@icnArrowRight: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/PiA8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMS40OSAzMS40OSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzEuNDkgMzEuNDk7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4gPHBhdGggc3R5bGU9ImZpbGw6IzAwMDAwMDsiIGQ9Ik0yMS4yMDUsNS4wMDdjLTAuNDI5LTAuNDQ0LTEuMTQzLTAuNDQ0LTEuNTg3LDBjLTAuNDI5LDAuNDI5LTAuNDI5LDEuMTQzLDAsMS41NzFsOC4wNDcsOC4wNDdIMS4xMTEgQzAuNDkyLDE0LjYyNiwwLDE1LjExOCwwLDE1LjczN2MwLDAuNjE5LDAuNDkyLDEuMTI3LDEuMTExLDEuMTI3aDI2LjU1NGwtOC4wNDcsOC4wMzJjLTAuNDI5LDAuNDQ0LTAuNDI5LDEuMTU5LDAsMS41ODcgYzAuNDQ0LDAuNDQ0LDEuMTU5LDAuNDQ0LDEuNTg3LDBsOS45NTItOS45NTJjMC40NDQtMC40MjksMC40NDQtMS4xNDMsMC0xLjU3MUwyMS4yMDUsNS4wMDd6Ii8+IDwvc3ZnPgo=";
+@icnDownload: "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/PiA8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0NzEuMiA0NzEuMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDcxLjIgNDcxLjI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4gPGc+IDxnPiA8cGF0aCBkPSJNNDU3LjcsMjMwLjE1Yy03LjUsMC0xMy41LDYtMTMuNSwxMy41djEyMi44YzAsMzMuNC0yNy4yLDYwLjUtNjAuNSw2MC41SDg3LjVjLTMzLjQsMC02MC41LTI3LjItNjAuNS02MC41di0xMjQuOCBjMC03LjUtNi0xMy41LTEzLjUtMTMuNXMtMTMuNSw2LTEzLjUsMTMuNXYxMjQuOGMwLDQ4LjMsMzkuMyw4Ny41LDg3LjUsODcuNWgyOTYuMmM0OC4zLDAsODcuNS0zOS4zLDg3LjUtODcuNXYtMTIyLjggQzQ3MS4yLDIzNi4yNSw0NjUuMiwyMzAuMTUsNDU3LjcsMjMwLjE1eiIvPiA8cGF0aCBkPSJNMjI2LjEsMzQ2Ljc1YzIuNiwyLjYsNi4xLDQsOS41LDRzNi45LTEuMyw5LjUtNGw4NS44LTg1LjhjNS4zLTUuMyw1LjMtMTMuOCwwLTE5LjFjLTUuMy01LjMtMTMuOC01LjMtMTkuMSwwbC02Mi43LDYyLjggVjMwLjc1YzAtNy41LTYtMTMuNS0xMy41LTEzLjVzLTEzLjUsNi0xMy41LDEzLjV2MjczLjlsLTYyLjgtNjIuOGMtNS4zLTUuMy0xMy44LTUuMy0xOS4xLDBjLTUuMyw1LjMtNS4zLDEzLjgsMCwxOS4xIEwyMjYuMSwzNDYuNzV6Ii8+IDwvZz4gPC9nPiA8L3N2Zz4K";
+
+.contentSlider {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 98vw;
+  height: 420px;
+  max-height: 70vh;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 1);
+
+  &,
+  &.off {
+    display: none;
+  }
+
+  &.on {
+    display: block;
+  }
+
+  &.zoom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
+    z-index: 5446;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    & .contentSliderScene {
+      cursor: zoom-out;
+    }
+  }
+
+  &.param-zoom,
+  &.zoom,
+  &[zoom] {
+    cursor: zoom-in;
+  }
+
+  &:hover {
+    .contentSliderBtn,
+    .contentSliderDownloadButton {
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: background-color 0.25s 0s ease-out;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.6);
+        transition: background-color 0.25s 0s ease-out;
+      }
+
+      &.active {
+        background-color: rgba(65, 108, 161, 0.6);
+        transition: background-color 0.25s 0s ease-out;
+      }
+    }
+
+    .contentSliderBtnLeft,
+    .contentSliderBtnRight,
+    .contentSliderDownloadButton {
+      &:after {
+        opacity: 0.4;
+        background-size: 55%;
+      }
+    }
+  }
+
+  &Backdrop {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    transition: background-image 0.25s 0s ease-out;
+  }
+
+  &Scene {
+    display: block;
+    outline: 1px solid #ccc;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-position: center center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.567);
+    transition: background-image 0.25s 0s ease-out;
+  }
+
+  &DownloadButton {
+    width: 32px;
+    height: 32px;
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 4;
+    transition: background-color 0.25s 0.25s ease-out;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      background-image: url("@{icnDownload}");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 50%;
+      transition: opacity 0.25s 0s ease-out, background-size 0.25s 0s ease-out;
+    }
+  }
+
+  &Btn {
+    display: block;
+    width: 64px;
+    height: 64px;
+    /* border-radius: 64px; */
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    margin-top: -32px;
+    top: 50%;
+    cursor: pointer;
+    transition: background-color 0.25s 0.25s ease-out;
+  }
+
+  &BtnLeft,
+  &BtnRight {
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.2;
+      background-image: url("@{icnArrowRight}");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 50%;
+      transition: opacity 0.25s 0s ease-out, background-size 0.25s 0s ease-out;
+    }
+  }
+
+  &BtnLeft {
+    left: 0;
+    z-index: 3;
+
+    &:after {
+      transform: scale(-1);
+    }
+  }
+
+  &BtnRight {
+    right: 0;
+    z-index: 4;
+
+    :after {}
+  }
+
+  &StatusBar {
+    margin-top: -2em;
+    margin-bottom: 2em;
+    opacity: 0.5;
+  }
+}
