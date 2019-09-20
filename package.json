@@ -4,7 +4,7 @@
   "description": "Just another js-slider for pictures",
   "main": "dist/index.js",
   "scripts": {
-    "build": "babel src/ -d dist/",
+    "build": "gulp",
     "test": "echo \"No test specified\"",
     "prepublish": "npm run build"
   },
@@ -30,7 +30,13 @@
     "@babel/preset-env": "^7.6.0",
     "eslint": "^6.4.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2"
+    "eslint-plugin-import": "^2.18.2",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-less": "^4.0.1",
+    "gulp-uglify": "^3.0.2"
   },
   "dependencies": {
     "@babel/polyfill": "^7.6.0"
