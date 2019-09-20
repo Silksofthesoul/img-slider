@@ -11,16 +11,27 @@ Description: just another js-slider for pictures
 
 Directories:
 
--   **dist** -- compiled js script that will work fine in most browsers. (!! Recommended for require.)
+-   **dist** -- compiled js/css.
 -   **imgs** -- pictures for example.
--   **src** -- js sources - will work in modern browsers, but problems can be in Internet Explorer(Edge, and other stupid software). (Not recommended for connection.)
+-   **src** -- sources
 
 Files:
 
--   **index.css** -- css styles
 -   **index.html** -- page with an example article and two sliders in it.
 
 How to use:
+
+in `<head>` place code like this:
+
+```html
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/index.css">
+  <!--[if !IE]><!-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js"></script>
+  <!--<![endif]-->
+  <!-- IE - must die!!1-->
+  <script src="./dist/index.js"></script>
+```
 
 At the end of `<body>` place the code:
 
@@ -52,7 +63,7 @@ Image addresses are separated by a space character corresponding to the regular 
 The parameter classes are available for the container: `.param-statusbar .param-downloadbutton .param-zoom`
 
 -   **.param-statusbar** - Show the status bar. The status displays information about which image on the account from the list is displayed (1/10).
--   **.downloadbutton** -- Show upload image button
+-   **.param-downloadbutton** -- Show upload image button
 -   **.param-zoom** -- The ability to deploy the inspector to the entire browser screen.
 
 Example:
@@ -73,16 +84,27 @@ Example:
 
 Папки:
 
--   **dist** -- скомпилированный js скрипт который будет работать нормально в большинстве браузеров. (!!Рекомендуется к подключению.)
+-   **dist** -- скомпилированные js/css
 -   **imgs** -- картинки для примера.
--   **src** -- исходники js -- будут работать в современных браузерах, но проблемы могут быть в ie. (Не рекомендуется к подключению.)
+-   **src** -- исходники
 
 Файлы:
 
--   **index.css** -- стили
 -   **index.html** -- стр. с примером статьи и двумя слайдерами в нем.
 
 как запустить:
+
+В `<head>` вставить код подобный этому:
+
+```html
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/index.css">
+  <!--[if !IE]><!-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser-polyfill.min.js"></script>
+  <!--<![endif]-->
+  <!-- IE - must die!!1-->
+  <script src="./dist/index.js"></script>
+```
 
 В конце `<body>` разместить код:
 
@@ -114,7 +136,7 @@ Example:
 Для контейнера доступны классы-параметры: `.param-statusbar .param-downloadbutton .param-zoom`
 
 -   **.param-statusbar** -- Показывать полосу статуса. В статусе отображается информация о том, какое изображение по счету из списка показывается (1 / 10).
--   **.downloadbutton** -- Показывать кнопку "загрузить изображение"
+-   **.param-downloadbutton** -- Показывать кнопку "загрузить изображение"
 -   **.param-zoom** -- Возможность разворачивать осмотрщик на весь экран браузера.
 
 Пример:
