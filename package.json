@@ -26,19 +26,19 @@
   "homepage": "https://github.com/Silksofthesoul/img-slider",
   "devDependencies": {
     "@babel/cli": "^7.6.0",
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
-    "eslint": "^6.4.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "eslint": "^8.29.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-csso": "^3.0.1",
-    "gulp-less": "^4.0.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-less": "^5.0.0",
     "gulp-uglify": "^3.0.2"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.6.0"
+    "@babel/polyfill": "^7.12.1"
   }
 }
