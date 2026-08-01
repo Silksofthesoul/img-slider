@@ -25,9 +25,9 @@
   },
   "homepage": "https://github.com/Silksofthesoul/img-slider",
   "devDependencies": {
-    "@babel/cli": "^7.6.0",
-    "@babel/core": "^7.20.5",
-    "@babel/preset-env": "^7.20.2",
+    "@babel/cli": "^8.0.1",
+    "@babel/core": "^8.0.1",
+    "@babel/preset-env": "^8.0.2",
     "eslint": "^8.29.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
